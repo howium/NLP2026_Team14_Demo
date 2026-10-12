@@ -22,7 +22,6 @@ The project asks *when model sophistication actually pays off*: the four routes 
 ├── proposal/            # Phase 1: Project Proposal
 │   ├── Team14_Proposal.pdf
 │   └── latex/           # LaTeX sources (ACL official template)
-├── requirements.docx    # Original course project requirements (Chinese)
 └── README.md
 ```
 
