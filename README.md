@@ -9,7 +9,7 @@ Team 14 · Jiahao Wu (Student ID: 2113454) · solo team.
 
 **ClassiScope** integrates four text-classification model families under a single data protocol, evaluation suite, and web interface:
 
-1. **Sparse lexical features** — TF-IDF + logistic regression
+1. **Sparse lexical features** — bag-of-words / TF-IDF + logistic regression
 2. **Static word embeddings** — Word2Vec / GloVe mean-pooled document vectors + logistic regression
 3. **Pretrained transformers** — fine-tuned BERT-base
 4. **Instruction-tuned LLMs** — zero-/few-shot prompting (Qwen2.5 via API, small local variant as fallback)
