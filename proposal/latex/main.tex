@@ -35,7 +35,7 @@ This proposal presents \textbf{ClassiScope}, a unified comparative system for te
 
 \section{Team Members and Responsibilities}
 
-This project is completed individually. Jiahao Wu (Student ID: 2113454) is solely responsible for all components: problem formulation and related-work survey, system design and implementation, data preparation, all experiments and analysis, the final report and presentation, and the runnable demonstration.
+This is an individual Track B (Demonstration) project. Jiahao Wu (Student ID: 2113454) is solely responsible for all components: problem formulation and related-work survey, system design and implementation, data preparation, all experiments and analysis, the final report and presentation, and the runnable demonstration.
 
 \section{Background and Motivation}
 
@@ -49,7 +49,7 @@ We will build \textbf{ClassiScope}, a unified text-classification system, and us
 
 \begin{itemize}
 \item \textbf{RQ1 (Accuracy).} How do the four model families compare on the same datasets, with identical splits, preprocessing, and metrics?
-\item \textbf{RQ2 (Robustness).} How do their predictions degrade under character-level perturbations (typos, spacing, casing) and cross-task transfer?
+\item \textbf{RQ2 (Robustness).} How do they degrade under character-level perturbations (typos, spacing, casing), and how well does prompting transfer zero-shot to the other task?
 \item \textbf{RQ3 (Interpretability).} What token-level evidence does each family rely on, and to what extent do explanations agree across families?
 \item \textbf{RQ4 (Efficiency).} What accuracy--cost trade-offs (trainable parameters, training time, inference latency) arise for practical deployment?
 \end{itemize}
@@ -64,11 +64,11 @@ We will build \textbf{ClassiScope}, a unified text-classification system, and us
 
 \section{Evaluation Plan}
 
-We evaluate on two classification tasks: news topic classification on the course-provided NYT news subset, and sentiment classification on the SST-2 benchmark \citep{socher-2013-recursive}. All routes report \textbf{Accuracy} and \textbf{Macro-F1} on the same held-out test set, with paired bootstrap tests for significance. Robustness is measured as accuracy deltas under the perturbation suite and as cross-task transfer gaps. Efficiency is reported as trainable parameters, wall-clock training time, and per-sample inference latency. Interpretability is assessed qualitatively and quantitatively, by the overlap of top-attributed tokens across families. The four routes serve as baselines for one another; the study itself is the comparison, so no external system is required for a valid result.
+We evaluate on two classification tasks: news topic classification on the course-provided NYT news subset, and sentiment classification on the SST-2 benchmark \citep{socher-2013-recursive}. All routes report \textbf{Accuracy} and \textbf{Macro-F1} on the same held-out test set, with paired bootstrap tests for significance. Robustness is measured as accuracy deltas under the perturbation suite, plus zero-shot transfer of the prompting route to the other task. Efficiency is reported as trainable parameters, wall-clock training time, and per-sample inference latency. Interpretability is assessed qualitatively and quantitatively, by the overlap of top-attributed tokens across families. The four routes serve as baselines for one another; the study itself is the comparison, so no external system is required for a valid result.
 
 \section{Expected Outcomes}
 
-The project will deliver: (1)~an open-source, reproducible system with a runnable demo (live demo or video, per course requirements); (2)~a controlled comparison study answering RQ1--RQ4; (3)~an eight-page ACL-format final report; and (4)~final slides and a contribution statement. We hypothesize that (H1) the fine-tuned transformer is strongest in-domain when labeled data is plentiful, with sparse and embedding-based baselines close behind on easy topic tasks, as our course results suggest; (H2) LLM prompting is competitive without any task-specific training, especially in low-data regimes, but at higher latency and cost; and (H3) the families make complementary errors, which their respective explanations expose. The system is designed so that whichever hypotheses the data overturns, the resulting analysis remains a substantive contribution.
+The project will deliver: (1)~an open-source, reproducible system with a runnable demo (live demo or video, per course requirements); (2)~a controlled comparison study answering RQ1--RQ4; (3)~an eight-page ACL-format final report; and (4)~final slides and a contribution statement. We hypothesize that (H1) the fine-tuned transformer is strongest in-domain when labeled data is plentiful, with sparse and embedding-based baselines staying close behind, and sometimes ahead, on easy topic tasks, as our course results suggest; (H2) LLM prompting is competitive without any task-specific training, especially in low-data regimes, but at higher latency and cost; and (H3) the families make complementary errors, which their respective explanations expose. The system is designed so that whichever hypotheses the data overturns, the resulting analysis remains a substantive contribution.
 
 \section{Project Timeline}
 
