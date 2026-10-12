@@ -64,7 +64,7 @@ We will build \textbf{ClassiScope}, a unified text-classification system, and us
 
 \section{Evaluation Plan}
 
-We evaluate on two public benchmarks spanning two classification tasks: the NYT news topic dataset used in course exercises \citep{sandhaus2008nyt} and the SST-2 sentiment dataset \citep{socher-2013-recursive}. All routes report \textbf{Accuracy} and \textbf{Macro-F1} on the same held-out test set, with paired bootstrap tests for significance. Robustness is measured as accuracy deltas under the perturbation suite and as cross-task transfer gaps. Efficiency is reported as trainable parameters, wall-clock training time, and per-sample inference latency. Interpretability is assessed qualitatively and quantitatively, by the overlap of top-attributed tokens across families. The four routes serve as baselines for one another; the study itself is the comparison, so no external system is required for a valid result.
+We evaluate on two classification tasks: news topic classification on the course-provided NYT news subset, and sentiment classification on the SST-2 benchmark \citep{socher-2013-recursive}. All routes report \textbf{Accuracy} and \textbf{Macro-F1} on the same held-out test set, with paired bootstrap tests for significance. Robustness is measured as accuracy deltas under the perturbation suite and as cross-task transfer gaps. Efficiency is reported as trainable parameters, wall-clock training time, and per-sample inference latency. Interpretability is assessed qualitatively and quantitatively, by the overlap of top-attributed tokens across families. The four routes serve as baselines for one another; the study itself is the comparison, so no external system is required for a valid result.
 
 \section{Expected Outcomes}
 
