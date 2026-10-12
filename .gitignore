@@ -8,6 +8,7 @@
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+proposal/latex/main.pdf
 
 # Python (added from Phase 2)
 .venv/
