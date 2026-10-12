@@ -14,7 +14,7 @@ Team 14 · Jiahao Wu (Student ID: 2113454) · solo team.
 3. **Pretrained transformers** — fine-tuned BERT-base
 4. **Instruction-tuned LLMs** — zero-/few-shot prompting (Qwen2.5 via API, small local variant as fallback)
 
-The project asks *when model sophistication actually pays off*: the four routes are compared on identical data splits (Accuracy, Macro-F1), stress-tested for robustness, probed with token-level explanations, and profiled for efficiency (parameters, training time, latency). Benchmarks: NYT news topic classification and SST-2 sentiment.
+The project asks *when model sophistication actually pays off*: the four routes are compared on identical data splits (Accuracy, Macro-F1), stress-tested for robustness, probed with token-level explanations, and profiled for efficiency (parameters, training time, latency). Evaluation: news topic classification on the course-provided NYT news subset, plus sentiment classification on SST-2.
 
 ## Repository Structure
 
